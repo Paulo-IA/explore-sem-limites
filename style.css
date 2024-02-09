@@ -1,0 +1,264 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --white: #fff;
+  --gray-100: #f9f4fb;
+  --purple-400: #b52184;
+  --purple-500: #312d64;
+
+  --purple-500-70: rgba(49, 45, 100, 0.7);
+}
+
+body,
+button,
+textarea,
+input {
+  font-family: "Mulish", sans-serif;
+}
+
+body {
+  font-size: 1.6rem;
+
+  background-color: var(--gray-100);
+}
+
+h1,
+h2 {
+  color: var(--purple-400);
+}
+
+p {
+  color: var(--purple-500);
+}
+
+/* main */
+main .main-img {
+  margin: 0 auto 1.7rem;
+  width: 36.4rem;
+  height: 37rem;
+  background-image: url("./assets/astronaut.svg");
+}
+
+main .main-texts {
+  text-align: center;
+}
+
+.main-texts h1 {
+  font-size: 3.2rem;
+  font-weight: 900;
+}
+
+.main-texts p {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.main-texts img {
+  margin: 3.5rem 0 9.1rem;
+}
+
+/* cards */
+#cards {
+  display: grid;
+  gap: 5rem;
+
+  padding: 5.2rem 3.9rem;
+}
+
+.card {
+  background-color: var(--white);
+  border-radius: 2rem;
+
+  padding: 2.65rem;
+}
+
+.card img {
+  margin-bottom: 3.3rem;
+}
+
+.card h2 {
+  font-size: 2.9rem;
+  font-weight: 900;
+
+  margin-bottom: 2rem;
+}
+
+.card p {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+/* form section */
+#form-area {
+  padding: 8.4rem 4.1rem 6.3rem;
+}
+
+#form-area h2 {
+  font-size: 3.2rem;
+  font-weight: 900;
+
+  margin-bottom: 4.3rem;
+}
+
+#form-area form {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+fieldset,
+textarea {
+  border: 2px solid var(--purple-500);
+  border-radius: 1.6rem;
+  padding: 1.4rem 1.2rem;
+}
+
+fieldset {
+  display: flex;
+  align-items: center;
+
+  gap: 1.2rem;
+}
+
+input {
+  width: 100%;
+  border: 0;
+}
+
+textarea,
+input {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--purple-500);
+
+  background: transparent;
+
+  outline: none;
+}
+
+textarea::placeholder,
+input::placeholder {
+  color: var(--purple-500-70);
+}
+
+textarea {
+  height: 12.6rem;
+}
+
+button {
+  width: fit-content;
+  border: 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--white);
+
+  padding: 1.1rem 1.6rem;
+
+  border-radius: 1.6rem;
+
+  cursor: pointer;
+}
+
+button:hover {
+  background: rgb(52, 49, 147);
+  background: linear-gradient(
+    130deg,
+    rgba(48, 44, 99, 1) 0%,
+    rgba(52, 49, 147, 1) 100%
+  );
+}
+
+.form-section-img {
+  display: none;
+}
+
+footer,
+#cards,
+button {
+  background: rgb(52, 49, 147);
+  background: linear-gradient(
+    130deg,
+    rgba(52, 49, 147, 1) 0%,
+    rgba(48, 44, 99, 1) 100%
+  );
+}
+
+footer {
+  padding: 3.2rem 0;
+  color: var(--white);
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  main {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 2.8rem;
+
+    flex-direction: row-reverse;
+
+    /* background-color: green; */
+    width: 90%;
+  }
+
+  .main-img {
+    transform: scale(1.9) translateY(20%);
+    width: 71.9rem;
+    height: 73.2rem;
+    background-repeat: no-repeat;
+  }
+
+  .main-texts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    height: 73.2rem;
+
+    align-items: flex-start;
+  }
+
+  .main-texts h1 {
+    font-size: 5.9rem;
+  }
+  .main-texts p {
+    font-size: 3.2rem;
+  }
+
+  .main-texts img {
+    position: absolute;
+
+    bottom: 0;
+  }
+
+  /* cards */
+  #cards {
+    display: flex;
+  }
+
+  /* form */
+  section {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #form-area {
+    flex: 1;
+    padding: 9.5rem 9.3rem 9.5rem;
+  }
+
+  #form-area form {
+    width: 100%;
+  }
+
+  .form-section-img {
+    display: block;
+  }
+}
